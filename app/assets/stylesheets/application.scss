@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+
+body{
+	magin: 0;
+}
+
+h1,h2,h3{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div{
+	color: #000;
+}
+
+th{
+	color: #000;
+}
+
+.notice {
+  background-color: green;
+  color: #white;
+  text-align: center;
+}
+
+/* -----------header---------------- */
+
+.header-bar{
+	background-color: #333;
+	height: 70px;
+}
+
+.header-items{
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bookers{
+	color: #fff;
+	font-size: 25px;
+}
+
+.field{
+	margin-bottom: 10px;
+}
+/* -----------header end------------ */
+
+/*------------logout時-----------------*/
+.about_box{
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.top_botton{
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ---------- user info -----------*/
+.user_info-item1{
+	margin:10px 0 10px 0;
+	padding:10px 0 10px 0;
+
+}
+.user_info-item2{
+	margin:10px 0 10px 0;
+	border-top: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+	padding:10px 0 10px 0;
+	font-size: 15px;
+}
+.user_info-item3{
+	margin:10px 0 10px 0;
+	padding:10px 0 10px 0;
+	font-size: 15px;
+}
+.users2{
+	margin-left:20px;
+}
+.users3{
+	margin-left:20px;
+}
+
+.user_info-box{
+	max-width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* ----------user info end-----------*/
+
+
+/* ----------book-new ---------------*/
+.book-title{
+	width: 200px;
+}
+
+.book-body{
+	width: 100%;
+}
+
+/* edit_form */
+.edit-box{
+	margin-right: 25%;
+	margin-left: 25%;
+}
+
+.edit-text{
+	white-space: nowrap
+}
+
+/* log-in */
+.devise-box{
+	margin: 0 25%;
+}
+
+.home-box{
+	margin-right: 25%;
+	margin-left: 25%;
+}

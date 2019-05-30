@@ -1,0 +1,72 @@
+<header class="header-bar">
+  <div class="header-items">
+    <h2 class="bookers">Bookers</h2>
+    <div id="slidemenu">
+      <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
+        <% if user_signed_in? %>
+          <li class="">
+            <%= link_to user_path(current_user.id)  do %>
+            <span class="glyphicon glyphicon-home" aria-hidden="true">Home</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to users_path do %>
+            <span class="glyphicon glyphicon-user" aria-hidden="true">Users</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to books_path do %>
+            <span class="glyphicon glyphicon-book" aria-hidden="true">Books</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to destroy_user_session_path, method: :delete  do %>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true">logout</span>
+            <% end %>
+          </li>
+
+        <% else %>
+          <li class="">
+            <%= link_to root_path  do %>
+            <span class="glyphicon glyphicon-home" aria-hidden="true">Home</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to home_about_path do %>
+            <span class="glyphicon glyphicon-link" aria-hidden="true">About</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to new_user_registration_path do %>
+            <span class="glyphicon glyphicon-edit" aria-hidden="true">sign up</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to user_session_path do %>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true">login</span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="home-box">
+	<h2>Forgot your password?</h2>
+
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+	  <%= render "devise/shared/error_messages", resource: resource %>
+
+	  <div class="field">
+	    <%= f.label :email %><br />
+	    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit "Send me reset password instructions", class: "btn btn-danger" %>
+	  </div>
+	<% end %>
+
+	<%= render "devise/shared/links" %>
+</div>
